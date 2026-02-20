@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aulas de Piano e Teclado | Professora Gabriella Walsh</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-green': '#5F6F52', 
+                        'brand-text': '#FBFBF8',   
+                        'brand-accent': '#B9C09D', 
+                        'brand-action': '#A3B18A', 
+                        'brand-dark': '#3A4431',   
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'serif': ['Merriweather', 'serif'],
+                    },
+                    animation: {
+                        'bounce-slow': 'bounce 2s infinite',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Botões "Clicáveis" com Feedback Visual */
+        .cta-button {
+            @apply bg-brand-action text-brand-dark font-bold py-3 px-6 rounded-lg shadow-md transition-all duration-300 ease-out flex items-center justify-center gap-2;
+        }
+        .cta-button:hover {
+            @apply transform -translate-y-1 shadow-lg bg-brand-accent brightness-105;
+        }
+        .cta-button:active {
+            @apply transform scale-95 shadow-sm translate-y-0;
+        }
+
+        /* Menu com sublinhado animado */
+        .nav-link {
+            @apply relative text-gray-600 hover:text-brand-green transition-colors pb-1;
+        }
+        .nav-link::after {
+            content: '';
+            @apply absolute bottom-0 left-0 w-0 h-0.5 bg-brand-action transition-all duration-300;
+        }
+        .nav-link:hover::after {
+            @apply w-full;
+        }
+
+        /* Classe para interação suave nos cards (sem mudar o design original) */
+        .interactive-card {
+            @apply transition-transform duration-300 ease-out;
+        }
+        .interactive-card:hover {
+            @apply transform -translate-y-2;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800 antialiased selection:bg-brand-accent selection:text-brand-dark">
+
+    <nav class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#inicio" class="font-serif font-bold text-xl text-brand-green tracking-tight hover:opacity-80 transition-opacity">
+                Gabriella Walsh
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#sobre" class="nav-link font-medium">Sobre Mim</a>
+                <a href="#metodologia" class="nav-link font-medium">Metodologia</a>
+                <a href="#planos" class="nav-link font-medium">Planos</a>
+            </div>
+            <a href="#contato" class="cta-button hidden md:inline-flex text-sm py-2 px-5">
+                Agendar Aula
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="inicio" class="relative min-h-screen flex items-center justify-center bg-brand-green text-brand-text py-20 px-6 overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
+                <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-accent rounded-full blur-3xl"></div>
+                <div class="absolute bottom-0 left-0 w-64 h-64 bg-brand-dark rounded-full blur-3xl"></div>
+            </div>
+
+            <div class="relative max-w-4xl text-center z-10">
+                <span class="inline-block py-1 px-3 rounded-full bg-brand-text/10 border border-brand-text/20 text-sm mb-6 font-medium tracking-wide">
+                    Vagas abertas para novos alunos
+                </span>
+                <h1 class="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6 drop-shadow-sm">
+                    AULAS DE PIANO <br/> <span class="text-brand-accent">E TECLADO</span>
+                </h1>
+                <p class="font-serif text-xl md:text-2xl mb-10 italic text-brand-text/90 font-light">
+                    "Mais do que tocar notas, o piano ensina a sentir a música."
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#contato" class="cta-button text-lg py-4 px-8 shadow-lg shadow-brand-dark/20">
+                        Agende sua Aula Experimental
+                    </a>
+                </div>
+            </div>
+
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce-slow text-brand-accent/70">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+            </div>
+        </section>
+
+        <section id="sobre" class="py-24 bg-white px-6">
+            <div class="container mx-auto max-w-5xl">
+                <h2 class="font-serif text-4xl font-bold text-center text-brand-dark mb-16">
+                    Conheça a Professora Gabriella
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="relative group">
+                        <div class="absolute inset-0 bg-brand-accent rounded-lg transform translate-x-3 translate-y-3 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform"></div>
+                        <img src="https://drive.google.com/thumbnail?id=1ekNq5BYEjfbPJT0v4_kNijaSp4F5n4Nn&sz=w1000" 
+                             alt="Professora Gabriella E. Gambôa Walsh"
+                             class="relative rounded-lg shadow-xl w-full h-auto object-cover aspect-square z-10 bg-gray-200">
+                    </div>
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-brand-green mb-6 border-l-4 border-brand-action pl-4">Minha Jornada com a Música</h3>
+                            <ul class="space-y-4 text-gray-700">
+                                <li class="flex items-start group hover:bg-gray-50 p-2 rounded transition-colors">
+                                    <div class="bg-brand-action/20 p-2 rounded-full mr-4 text-brand-dark flex-shrink-0">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.54-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                                    </div>
+                                    <span><b>Paixão que vem de cedo:</b> Comecei a aprender piano aos 4 anos de idade.</span>
+                                </li>
+                                <li class="flex items-start group hover:bg-gray-50 p-2 rounded transition-colors">
+                                    <div class="bg-brand-action/20 p-2 rounded-full mr-4 text-brand-dark flex-shrink-0">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 100-2 1 1 0 000 2zM9 9a1 1 0 112 0 1 1 0 01-2 0zM7 13a1 1 0 100-2 1 1 0 000 2zm2 0a1 1 0 112 0 1 1 0 01-2 0zm4 0a1 1 0 112 0 1 1 0 01-2 0z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                                    <span><b>Foco no Ensino:</b> Apaixonada por compartilhar o conhecimento e ver meus alunos evoluindo.</span>
+                                </li>
+                                <li class="flex items-start group hover:bg-gray-50 p-2 rounded transition-colors">
+                                    <div class="bg-brand-action/20 p-2 rounded-full mr-4 text-brand-dark flex-shrink-0">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3.5a1 1 0 00.788 1.84L4 7.028v5.942a1 1 0 00.553.894l5 2.5a1 1 0 00.894 0l5-2.5a1 1 0 00.553-.894V7.028l.764.382a1 1 0 00.788-1.84l-7-3.5zM5 7.64l5-2.5 5 2.5v4.718l-5 2.5-5-2.5V7.64z"></path></svg>
+                                    </div>
+                                    <span><b>Didática Diferenciada:</b> Cursando Fonoaudiologia, uso esse conhecimento para aprimorar a percepção auditiva e postura.</span>
+                                </li>
+                                <li class="flex items-start group hover:bg-gray-50 p-2 rounded transition-colors">
+                                    <div class="bg-brand-action/20 p-2 rounded-full mr-4 text-brand-dark flex-shrink-0">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V6.32l9-1.8v6.504A4.369 4.369 0 0015 11c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V3z"></path></svg>
+                                    </div>
+                                    <span><b>Repertório Especializado:</b> Meu foco principal é o ensino de música gospel e erudita.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-brand-green/5 p-6 rounded-xl border border-brand-green/10">
+                            <h3 class="font-serif text-xl font-bold text-brand-green mb-3">Para você me conhecer melhor...</h3>
+                            <ul class="space-y-2 list-disc list-inside text-gray-700">
+                                <li>Sou Cristã.</li>
+                                <li>Amo animais e o contato com a natureza.</li>
+                                <li>Coleciono partituras (e também boas risadas!).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="metodologia" class="py-24 bg-brand-green text-brand-text px-6">
+            <div class="container mx-auto max-w-5xl">
+                <h2 class="font-serif text-4xl font-bold text-center mb-16">
+                    Uma Metodologia Pensada para Você
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-brand-text/10 p-8 rounded-lg shadow-lg backdrop-blur-sm interactive-card">
+                        <h3 class="font-serif text-2xl font-bold mb-4">Repertório 100% Personalizado</h3>
+                        <p class="text-brand-text/90">
+                            Vamos focar nas músicas que você realmente ama. As aulas são moldadas aos seus gostos e objetivos, tornando o aprendizado muito mais prazeroso.
+                        </p>
+                    </div>
+                    <div class="bg-brand-text/10 p-8 rounded-lg shadow-lg backdrop-blur-sm interactive-card">
+                        <h3 class="font-serif text-2xl font-bold mb-4">Didática Sólida (Método Leila Fletcher e Outros)</h3>
+                        <p class="text-brand-text/90">
+                            Utilizamos métodos didáticos consagrados mundialmente, que garantem um aprendizado progressivo, divertido e com uma base teórica forte.
+                        </p>
+                    </div>
+                    <div class="bg-brand-text/10 p-8 rounded-lg shadow-lg backdrop-blur-sm interactive-card">
+                        <h3 class="font-serif text-2xl font-bold mb-4">Aulas Online e Ao Vivo</h3>
+                        <p class="text-brand-text/90">
+                            Tenha toda a flexibilidade de aprender de casa, com aulas individuais e ao vivo pelo Google Meet, garantindo 100% da minha atenção.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="planos" class="py-24 bg-white px-6">
+            <div class="container mx-auto max-w-5xl">
+                <h2 class="font-serif text-4xl font-bold text-center text-brand-dark mb-16">
+                    Comece a Tocar Agora
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="border-2 border-brand-action bg-brand-accent/10 rounded-lg shadow-xl p-8 text-center flex flex-col interactive-card">
+                        <h3 class="font-serif text-2xl font-bold text-brand-dark mb-4">Aula Experimental Gratuita</h3>
+                        <p class="font-bold text-brand-green text-3xl mb-4">Grátis</p>
+                        <p class="text-gray-700 mb-6 flex-grow">Um primeiro encontro de 30 minutos sem compromisso para nos conhecermos e você entender o método na prática.</p>
+                        <a href="#contato" class="cta-button w-full">Quero a minha!</a>
+                    </div>
+                    
+                    <div class="border border-gray-200 rounded-lg shadow-lg p-8 text-center flex flex-col interactive-card">
+                        <h3 class="font-serif text-2xl font-bold text-brand-dark mb-4">Pacote Mensal</h3>
+                        <p class="font-bold text-brand-green text-3xl mb-4">R$ 160</p>
+                        <p class="text-gray-700 mb-6 flex-grow">Inclui 1 aula por semana, com 1 hora de duração. O melhor custo-benefício para sua evolução contínua.</p>
+                        <a href="#contato" class="cta-button bg-brand-green text-brand-text hover:bg-brand-dark w-full">Contratar Pacote</a>
+                    </div>
+                    
+                    <div class="border border-gray-200 rounded-lg shadow-lg p-8 text-center flex flex-col interactive-card">
+                        <h3 class="font-serif text-2xl font-bold text-brand-dark mb-4">Aula Avulsa</h3>
+                        <p class="font-bold text-brand-green text-3xl mb-4">R$ 45</p>
+                        <p class="text-gray-700 mb-6 flex-grow">Uma aula única com 60 minutos de duração. Perfeito para quem tem uma agenda variada ou quer focar em um ponto específico.</p>
+                        <a href="#contato" class="cta-button bg-brand-green text-brand-text hover:bg-brand-dark w-full">Agendar Aula</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="py-24 bg-brand-green text-brand-text px-6">
+            <div class="container mx-auto max-w-3xl text-center">
+                <h2 class="font-serif text-4xl font-bold mb-6">
+                    Pronto(a) para a sua primeira nota?
+                </h2>
+                <p class="text-xl text-brand-text/90 mb-10">
+                    Agende já sua aula experimental gratuita e venha aprender piano! 
+                    Clique no botão abaixo para falar diretamente comigo.
+                </p>
+
+                <a href="https://wa.me/5511913531890?text=Ol%C3%A1%2C%20Gabriella!%20Vim%20do%20seu%20site%20e%20gostaria%20de%20agendar%20minha%20aula%20experimental%20gratuita."
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="cta-button text-lg py-4 px-10 inline-flex shadow-2xl shadow-black/20">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                    ENTRE EM CONTATO COMIGO
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-8 bg-brand-dark text-brand-accent/60 text-center">
+        <p>© 2025 Gabriella E. Gambôa Walsh. Todos os direitos reservados.</p>
+        <p class="text-sm mt-1">Site desenvolvido com carinho.</p>
+    </footer>
+
+</body>
+</html>
